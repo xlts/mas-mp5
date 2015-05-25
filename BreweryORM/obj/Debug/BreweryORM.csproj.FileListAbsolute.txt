@@ -1,0 +1,10 @@
+d:\visual studio 2013\Projects\BreweryORM\BreweryORM\bin\Debug\BreweryORM.exe.config
+d:\visual studio 2013\Projects\BreweryORM\BreweryORM\bin\Debug\BreweryORM.exe
+d:\visual studio 2013\Projects\BreweryORM\BreweryORM\bin\Debug\BreweryORM.pdb
+d:\visual studio 2013\Projects\BreweryORM\BreweryORM\bin\Debug\EntityFramework.dll
+d:\visual studio 2013\Projects\BreweryORM\BreweryORM\bin\Debug\EntityFramework.SqlServer.dll
+d:\visual studio 2013\Projects\BreweryORM\BreweryORM\bin\Debug\EntityFramework.xml
+d:\visual studio 2013\Projects\BreweryORM\BreweryORM\bin\Debug\EntityFramework.SqlServer.xml
+d:\visual studio 2013\Projects\BreweryORM\BreweryORM\obj\Debug\BreweryORM.csprojResolveAssemblyReference.cache
+d:\visual studio 2013\Projects\BreweryORM\BreweryORM\obj\Debug\BreweryORM.exe
+d:\visual studio 2013\Projects\BreweryORM\BreweryORM\obj\Debug\BreweryORM.pdb
