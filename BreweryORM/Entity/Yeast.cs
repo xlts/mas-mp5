@@ -11,13 +11,18 @@ using System.ComponentModel.DataAnnotations.Resources;
 
 namespace BreweryORM.Entity
 {
-    [Table("Yeast")]
-    public class Yeast : Resource
+    [ComplexType]
+    //[Table("Yeast")]
+    public class Yeast
     {
-        [Key]
-        public int YeastID { get; set; }
+        //[Key]
+        //public int YeastID { get; set; }
 
-        [Required]
+        public string Name { get; set; }
         public double FloculationRate { get; set; }
+
+        //public int BeerRecipeID { get; set; }
+        //[ForeignKey("BeerRecipeID")]
+        //public virtual BeerRecipe BeerRecipe { get; set; }
     }
 }

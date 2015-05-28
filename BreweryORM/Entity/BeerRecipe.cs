@@ -11,20 +11,36 @@ using System.ComponentModel.DataAnnotations.Resources;
 
 namespace BreweryORM.Entity
 {
-    [Table("Beer Recipe")]
-    public class BeerRecipe
+    [Table("BeerRecipe")]
+    public partial class BeerRecipe
     {
+
         [Key]
         public int BeerRecipeID { get; set; }
         
-        [Column("Name")]
         [MaxLength(20)]
         [Required]
         public string Name { get; set; }
 
+        //many-to-one
         public virtual ICollection<Beer> Beers { get; set; }
 
         //many-to-many
         public virtual ICollection<Resource> Resources { get; set; }
+
+        //qualified association
+        [ForeignKey("StyleName")]
+        public virtual Style Style { get; set; } 
+        public string StyleName { get; set; }
+
+        //composition
+        public Yeast Yeast { get; set; }
+
+        public BeerRecipe()
+        {
+            Yeast = new Yeast(); //complex type Yeast cannot be null
+            this.Resources = new HashSet<Resource>();
+        }
+
     }
 }

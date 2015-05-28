@@ -11,18 +11,18 @@ using System.ComponentModel.DataAnnotations.Resources;
 
 namespace BreweryORM.Entity
 {
-
-    public abstract class Resource //inheritance - Table Per Type strategy
+    [Table("Style")]
+    public class Style
     {
         [Key]
-        public int ResourceID { get; set; }
-
-        [MaxLength(20)]
-        [Required]
         public string Name { get; set; }
 
-        //many-to-many
+        [Required]
+        public String Origin { get; set; }
+
+        //qualified association
         public virtual ICollection<BeerRecipe> BeerRecipes { get; set; }
 
+     
     }
 }

@@ -17,20 +17,17 @@ namespace BreweryORM.Entity
         [Key]
         public int BeerID { get; set; }
        
-        [Column("Name")]
         [MaxLength(20)]
         [Required]
         public string Name { get; set; }
 
-        [Column("BrewingDate")]
-        [Required]
-        [DataType(DataType.Date)]
-        public DateTime BrewingDate { get; set; }
-
-       
+ 
+        //one-to-many
         public int BeerRecipeID { get; set; }
         [ForeignKey("BeerRecipeID")]
         public virtual BeerRecipe BeerRecipe { get; set; }
+
+        public virtual ICollection<BrewerBeer> BrewerBeers { get; set; } //association with attribute
 
         
     }

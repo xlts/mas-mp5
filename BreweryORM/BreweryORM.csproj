@@ -64,10 +64,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\BreweryContext.cs" />
+    <Compile Include="Controller\BrewerController.cs" />
+    <Compile Include="Controller\StyleController.cs" />
     <Compile Include="Entity\Beer.cs" />
     <Compile Include="Entity\BeerRecipe.cs" />
+    <Compile Include="Entity\Brewer.cs" />
+    <Compile Include="Entity\BrewerBeer.cs" />
     <Compile Include="Entity\Hop.cs" />
     <Compile Include="Entity\Resource.cs" />
+    <Compile Include="Entity\Style.cs" />
+    <Compile Include="Entity\Malt.cs" />
     <Compile Include="Entity\Yeast.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -10,22 +10,19 @@ namespace BreweryORM.Context
 {
     class BreweryContext : DbContext
     {
-       protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Hop>().Map(m =>
-            {
-              m.MapInheritedProperties();
-            });
-
-             modelBuilder.Entity<Yeast>().Map(m =>
-             {
-                 m.MapInheritedProperties();
-             });
-
-        }
-
         public DbSet<Beer> Beers { get; set; }
         public DbSet<BeerRecipe> BeerRecipes { get; set; }
+        public DbSet<Brewer> Brewers { get; set; }
+        public DbSet<BrewerBeer> BrewerBeers { get; set; }
+        public DbSet<Style> Styles { get; set; }
         public DbSet<Resource> Resources { get; set; }
+
+       protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Types<BeerRecipe>()
+             .Configure(ctc => ctc.Property(br => br.Yeast.Name).HasColumnName("Name"));
+        }
+
+       
     }
 }
